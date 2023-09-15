@@ -7,7 +7,7 @@ modified_user_text = user_text.replace('-' , ' ').title()
 # all_intern_link = 'https://internshala.com/internships/'
 # if(user_text == '' or user_text == ' ' or user_text == 'all' or user_text == 'All'):
 #     all_intern_link = 'https://internshala.com/internships/'
-#     str_list = []
+#     str_list = [] 
 #     int_total_pages = overall_intern_count(all_intern_link)
 #     modified_user_text = user_text.replace('-' , ' ').title()
 #     for i in range(1 , (int_total_pages)+1):

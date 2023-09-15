@@ -8,7 +8,7 @@ import requests
 # soup = BeautifulSoup(html_text, 'lxml')
 
 # total = soup.find('div' , class_='heading heading_4_6').text 
-# print(total)
+# print(total) 
 
 def intern_count(url):
     url_text = requests.get(url).text

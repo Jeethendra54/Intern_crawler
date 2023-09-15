@@ -3,7 +3,7 @@ import requests
 
 def required_skills(url):
     emp_list=[]
-    extracted_skills = []
+    extracted_skills = [] 
     convert_to_text = requests.get(url).text
     soup = BeautifulSoup(convert_to_text , 'lxml')
     skills = soup.find_all('span' , class_='round_tabs')
