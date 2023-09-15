@@ -4,7 +4,7 @@ user_text = str(input('Enter a tech stack to extract : '))
 stored_text = user_text
 modified_user_text = user_text.replace('-' , ' ').title()
 
-
+user_input = ['']
 
 # tech stack interns
 if(user_text == 'information technology' or user_text == 'Information technology' or user_text == 'it' or user_text == 'It' or user_text =='IT'):

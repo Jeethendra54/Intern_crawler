@@ -3,7 +3,7 @@ import time
 from time import sleep
 import requests
 from bs4 import BeautifulSoup
-from shared_data import intern_count 
+# from shared_data import intern_count 
 from user_prompt import *
 # from skills_openings import required_skills , openings
 
@@ -26,7 +26,7 @@ for i in range(len(str_list)):
 
     url = 'https://internshala.com/internships/' + user_text + '-internship/page-' + str_list[i] + '/'
 
-    Total_intern_in_website = intern_count(url)
+    # Total_intern_in_website = intern_count(url)
     html_text = requests.get(url)
 
     if(html_text.status_code == 200):
@@ -135,7 +135,7 @@ end = time.time()
 print()
 # print("No.of Companies scraped : {}".format(x))
 
-print("Total No.of {} internships shown on Internshala website = {}".format(modified_user_text , Total_intern_in_website))
+# print("Total No.of {} internships shown on Internshala website = {}".format(modified_user_text , Total_intern_in_website))
 print("Total No.of {} internships scraped = {}".format(modified_user_text , x))
 seconds = end - start
 minutes = seconds/60
@@ -149,3 +149,4 @@ with open("file.txt" , 'a') as f:
     f.write("No.of Companies scraped : {}".format(x))
     f.write("\n")
     f.write("Scraped in {} seconds".format(round_off_sec))
+    f.close()
