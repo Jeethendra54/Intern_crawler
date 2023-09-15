@@ -60,9 +60,11 @@ for i in range(len(str_list)):
             else:
                 Hiring = Intern.find('div',class_='actively_hiring_badge').text.lstrip().rstrip()
             
-
-            Start_date = re.findall(r'I[a-z]*' , Start_date)
-            Start_date = "".join(Start_date)
+            if Start_date:
+                Start_date = re.findall(r'I[a-z]*' , Start_date)
+                Start_date = "".join(Start_date)
+            else:
+                Start_date = "Not Provided"
 
             if Duration:
                 Duration = str(re.findall(r'[\d][A-z]*' , Duration)[0])

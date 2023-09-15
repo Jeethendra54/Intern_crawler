@@ -180,8 +180,8 @@ if(user_text == 'javascript' or user_text == 'Javascript'):
         str_list.append(str(i))
 
 if(user_text == 'wordpress' or user_text == 'Wordpress'):
-    # user_text = 'wordpress-development'
-    user_text = 'wordpress'
+    user_text = 'wordpress-development'
+    # user_text = 'wordpress'
     str_list = []
     link = 'https://internshala.com/internships/' + user_text + '-internship/'
     int_total_pages = intern_page_limit(link)
@@ -312,3 +312,18 @@ if(user_text == 'Data Analytics' or user_text == 'data analytics' or user_text =
     modified_user_text = user_text.replace('-' , ' ').title()
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
+
+
+if(user_text == 'english proficiency'):
+    user_text == 'english-proficiency-written'
+    str_list = []
+    link = 'https://internshala.com/internships/' + user_text + '-internship/'
+    int_total_pages = intern_page_limit(link)
+    modified_user_text = user_text.replace('-' , ' ').title()
+    for i in range(1 , (int_total_pages)+1):
+        str_list.append(str(i))
+
+else:
+    print("Error tech stack not found :(")
+    # user_text = -1
+    
