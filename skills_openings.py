@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def required_skills(url):
+def required_skills(url): 
     emp_list=[]
     extracted_skills = [] 
     convert_to_text = requests.get(url).text

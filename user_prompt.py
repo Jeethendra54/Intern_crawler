@@ -4,15 +4,6 @@ user_text = str(input('Enter a tech stack to extract : '))
 stored_text = user_text
 modified_user_text = user_text.replace('-' , ' ').title()
 
-# all_intern_link = 'https://internshala.com/internships/'
-# if(user_text == '' or user_text == ' ' or user_text == 'all' or user_text == 'All'):
-#     all_intern_link = 'https://internshala.com/internships/'
-#     str_list = [] 
-#     int_total_pages = overall_intern_count(all_intern_link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , (int_total_pages)+1):
-#         str_list.append(str(i))
-
 
 
 # tech stack interns
@@ -188,14 +179,15 @@ if(user_text == 'javascript' or user_text == 'Javascript'):
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
 
-# if(user_text == 'wordpress' or user_text == 'Wordpress'):
-#     user_text = 'wordpress-development'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , (int_total_pages)+1):
-#         str_list.append(str(i))
+if(user_text == 'wordpress' or user_text == 'Wordpress'):
+    # user_text = 'wordpress-development'
+    user_text = 'wordpress'
+    str_list = []
+    link = 'https://internshala.com/internships/' + user_text + '-internship/'
+    int_total_pages = intern_page_limit(link)
+    modified_user_text = user_text.replace('-' , ' ').title()
+    for i in range(1 , (int_total_pages)+1):
+        str_list.append(str(i))
 
 if(user_text == 'python' or user_text == 'Python' or user_text == 'PYTHON'):
     user_text = 'python'
@@ -252,43 +244,6 @@ if(user_text == 'ui and ux' or user_text == 'ui/ux' or user_text == 'UI/UX' or u
     for i in range(1 , int(int_total_pages)+1):
         str_list.append(str(i))
 
-# Engineering Interns
-# if(user_text == 'engineering' or user_text == 'Engineering'):
-#     user_text = 'engineering'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# if(user_text == 'aerospace' or user_text == 'Aerospace'):
-#     user_text = 'aerospace'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# if(user_text == 'mechanical' or user_text == 'Mechanical' or user_text == 'Mechanical Engineering' or user_text == 'Mechanical engineering'):
-#     user_text = 'mechanical'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# if(user_text == 'civil' or user_text == 'Civil' or user_text == 'Civil engineering' or user_text == 'Civil Engineering'):
-#     user_text = 'civil'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
 if(user_text == 'cs' or user_text == 'CS' or user_text == 'Computer Science' or user_text == 'Computer science'):
     user_text = 'computer-science'
     str_list = []
@@ -298,24 +253,6 @@ if(user_text == 'cs' or user_text == 'CS' or user_text == 'Computer Science' or 
     for i in range(1 , int(int_total_pages)+1):
         str_list.append(str(i))
     
-# if(user_text == 'Electronics' or user_text == 'electronics' or user_text == 'ec' or user_text == 'EC'):
-#     user_text = 'electronics'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# if(user_text == 'Electrical' or user_text == 'electrical' or user_text == 'EEE' or user_text == 'eee'):
-#     user_text = 'electrical'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
 if(user_text == 'network engineering' or user_text == 'Network engineering' or user_text == 'Network Engineering'):
     user_text = 'network-engineering'
     str_list = []
@@ -335,25 +272,6 @@ if(user_text == 'graphic design' or user_text == 'Graphic design'):
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
 
-# SEO
-# if(user_text == 'seo' or user_text == 'Seo' or user_text == 'SEO' or user_text == 'search engine optimization' or user_text == 'Search engine optimization' or user_text == 'Search Engine Optimization'):
-#     user_text = 'search-engine-optimization-(seo)'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , (int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Teaching
-# if(user_text == 'teaching' or user_text == 'Teaching'):
-#     user_text = 'teaching'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
 
 # Motion Graphics
 if(user_text == 'motion graphics' or user_text == 'Motion graphics' or user_text == 'Motion Graphics'):
@@ -375,36 +293,6 @@ if(user_text == 'Embedded systems' or user_text == 'Embedded Systems' or user_te
     for i in range(1 , int(int_total_pages)+1):
         str_list.append(str(i))
 
-# Video Making/Editing
-# if(user_text == 'Video making' or user_text == 'video making' or user_text == 'Video Making' or user_text == 'video editing' or user_text == 'Video Editing' or user_text == 'Video editing'):
-#     user_text = 'video-making%2Fediting'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Event Management
-# if(user_text == 'event management' or user_text == 'Event Management' or user_text == 'Event management'):
-#     user_text = 'event-management'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Photography
-# if(user_text == 'photography' or user_text == 'Photography' or user_text == 'photo' or user_text == 'Photo'):
-#     user_text == 'photography'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
 # Big Data
 if(user_text == 'big data' or user_text == 'Big data' or user_text == 'Big Data'):
     user_text = 'big-data'
@@ -414,51 +302,6 @@ if(user_text == 'big data' or user_text == 'Big data' or user_text == 'Big Data'
     modified_user_text = user_text.replace('-' , ' ').title()
     for i in range(1 , int(int_total_pages)+1):
         str_list.append(str(i))
-
-# Film Making
-# if(user_text == 'film making' or user_text == 'Film making' or user_text == 'Film Making'):
-#     user_text == 'film-making'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Finance
-# if(user_text == 'Finance' or user_text == 'finance'):
-#     user_text = 'finance'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Law
-# if(user_text == 'law' or user_text == 'Law'):
-#     str_list = ['1' , '2' , '3']
-
-
-# MBA
-# if(user_text == 'mba' or user_text == 'Mba' or user_text == 'MBA'):
-#     user_text = 'mba'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , int(int_total_pages)+1):
-#         str_list.append(str(i))
-
-# Marketing
-# if(user_text == 'Marketing' or user_text == 'marketing' or user_text == 'digital marketing' or user_text == 'Digital marketing'):
-#     user_text = 'digital-marketing'
-#     str_list = []
-#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
-#     int_total_pages = intern_page_limit(link)
-#     modified_user_text = user_text.replace('-' , ' ').title()
-#     for i in range(1 , (int_total_pages)+1):
-#         str_list.append(str(i))
 
 # Data Analytics
 if(user_text == 'Data Analytics' or user_text == 'data analytics' or user_text == 'Data analytics'):
