@@ -4,7 +4,8 @@ from time import sleep
 import requests
 from bs4 import BeautifulSoup
 # from shared_data import intern_count 
-from user_prompt import *
+# from user_prompt import *
+from user_prompt import user_text , modified_user_text , str_list
 # from skills_openings import required_skills , openings
 
 
@@ -76,12 +77,12 @@ for i in range(len(str_list)):
                 Stipend = Stipend.text
             else:
                 Stipend = 'N/A'
-            if(len(Stipend) == 12):
-                Stipend = ' Not provided'
+            # if(len(Stipend) == 12):
+            #     Stipend = ' Not provided'
             if(Stipend == 'Unpaid'):
                 Stipend = 'Unpaid'
-            if(Stipend == ''):
-                Stipend = 'N/A'
+            # if(Stipend == ''):
+            #     Stipend = 'N/A'
         
             if(len(total_skills) == 0):
                 total_skills = 'Unavailable/Not mentioned'

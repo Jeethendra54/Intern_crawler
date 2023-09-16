@@ -323,7 +323,6 @@ if(user_text == 'english proficiency'):
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
 
-else:
-    print("Error tech stack not found :(")
-    # user_text = -1
+
+
     
