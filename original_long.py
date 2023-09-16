@@ -11,7 +11,7 @@ html_text = requests.get('https://internshala.com/internships/'+user_text+'-inte
 soup = BeautifulSoup(html_text, 'lxml')
 Interns = soup.find_all('div',class_='container-fluid individual_internship visibilityTrackerItem')
 for Intern in Interns:
-    Company_name = Intern.find('div',class_='heading_6 company_name').text.strip()
+    Company_name = Intern.find('h4',class_='heading_6 company_name').text.strip()
     Role = Intern.find('div',class_='heading_4_5 profile').text.strip()
     Location = Intern.find('div',id='location_names').text.strip()
     Start_date = Intern.find('div',id='start-date-first').text.strip()
