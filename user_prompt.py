@@ -6,13 +6,26 @@ modified_user_text = user_text.replace('-' , ' ').title()
 
 # print(stored_text)
 user_input = [
-    'information technology','Information technology','it'  'It','IT',
+    'information technology','Information technology','it','It','IT',
     'computer vision','Computer vision','cv' , 'CV',
     'machine learning','Machine learning','Ml','ML','ml',
     'data science','Data science',
     'artificial intelligence','Artificial intelligence','AI','ai',
     'android app development','Android app development','android','Android',
+    'ios app development','ios app','Ios app','ios',"Ios","IOS",
+    'web development','Web development',
+    'full stack development','Full stack development','Full stack developer','full stack developer',
+    'front end development','Front end development','front end developer','Front end developer','front end','Front end','frontend','Frontend',
+    'backend','backend development','Backend development','Backend',
+    'flutter','flutter development','Flutter development','Flutter',
+    'angular js','Angular js','angular.js',
+    'php','php development','Php development','PHP','Php',
+    'node js' ,'Node js','nodejs','Nodejs',
+    'mobile app development','Mobile app development',
+    'blockchain','Blockchain', 
     ]
+
+
 
 # tech stack interns
 if(user_text == 'information technology' or user_text == 'Information technology' or user_text == 'it' or user_text == 'It' or user_text =='IT'):
