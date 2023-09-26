@@ -22,7 +22,10 @@ sleep(Time)
 print()
 print("Extracting {} internships".format(modified_user_text))
 
+
 start = time.time()
+
+
 for i in range(len(str_list)):
 
     url = 'https://internshala.com/internships/' + user_text + '-internship/page-' + str_list[i] + '/'
@@ -31,8 +34,9 @@ for i in range(len(str_list)):
     html_text = requests.get(url)
 
     if(html_text.status_code == 200):
-        # print("Status code : {}".format(html_text.status_code))
-        # print("Connection established....")
+        print("Status code : {}".format(html_text.status_code))
+        print("Connection established....")
+        # print("Connection established for page - {}".format(str_list[i]))
 
         html_text = requests.get(url).text
         soup = BeautifulSoup(html_text, 'lxml') 
@@ -136,6 +140,9 @@ for i in range(len(str_list)):
         print("Check the internet connection or check the URL")
 end = time.time()
 print()
+
+
+
 # print("No.of Companies scraped : {}".format(x))
 
 # print("Total No.of {} internships shown on Internshala website = {}".format(modified_user_text , Total_intern_in_website))
