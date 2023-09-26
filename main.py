@@ -98,7 +98,7 @@ for i in range(len(str_list)):
                 # f.write('Required Skills : '+ total_skills + '\n')
                 f.write('Location : ' + Location + '\n')
                 f.write('Start Date : ' + Start_date + '\n')
-                f.write('Stipend : ' + Stipend + '\n')
+                f.write('Stipend : ' + Stipend.lstrip() + '\n')
                 f.write('Posted ' + Post_Info + '\n')
                 f.write('Duration : ' + Duration + '\n')
                 # f.write('Openings : {}'.format(No_of_openings) + '\n')
