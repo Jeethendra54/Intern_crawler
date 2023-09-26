@@ -91,14 +91,14 @@ for i in range(len(str_list)):
 
             x = x + 1 # counting companies
 
-            with open('file.txt', 'a') as f:
+            with open('file.txt', 'a' ,  encoding='utf-8') as f:
                 f.write("Compnay {} ".format(x) + '\n')
                 f.write( 'Company : ' + Company_name + '\n')
                 f.write('Role : ' + Role + '\n')
                 # f.write('Required Skills : '+ total_skills + '\n')
                 f.write('Location : ' + Location + '\n')
                 f.write('Start Date : ' + Start_date + '\n')
-                f.write('Stipend : ' + Stipend.lstrip() + '\n')
+                f.write('Stipend : ' + Stipend + '\n')
                 f.write('Posted ' + Post_Info + '\n')
                 f.write('Duration : ' + Duration + '\n')
                 # f.write('Openings : {}'.format(No_of_openings) + '\n')
@@ -155,4 +155,3 @@ with open("file.txt" , 'a') as f:
     f.write("\n")
     # f.write(str(Interns))
     f.close()
-
