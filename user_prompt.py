@@ -315,7 +315,7 @@ if(user_text == 'Data Analytics' or user_text == 'data analytics' or user_text =
 
 
 if(user_text == 'english proficiency'):
-    user_text == 'english-proficiency-written'
+    user_text = 'english-proficiency-written'
     str_list = []
     link = 'https://internshala.com/internships/' + user_text + '-internship/'
     int_total_pages = intern_page_limit(link)

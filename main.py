@@ -152,4 +152,7 @@ with open("file.txt" , 'a') as f:
     f.write("No.of Companies scraped : {}".format(x))
     f.write("\n")
     f.write("Scraped in {} seconds".format(round_off_sec))
+    f.write("\n")
+    # f.write(str(Interns))
     f.close()
+
