@@ -1,6 +1,6 @@
 import re
 import time
-from time import sleep
+from time import sleep 
 import requests
 from bs4 import BeautifulSoup
 # from shared_data import intern_count 
@@ -24,8 +24,6 @@ print("Extracting {} internships".format(modified_user_text))
 
 
 start = time.time()
-
-
 for i in range(len(str_list)):
 
     url = 'https://internshala.com/internships/' + user_text + '-internship/page-' + str_list[i] + '/'
@@ -133,15 +131,13 @@ for i in range(len(str_list)):
             print("Hiring Info : {}".format(Hiring))
             sleep(Time)
             print("Apply here : {}".format(link))
+            print()
     
     elif(html_text.status_code != 200):
         print("Status code : {}".format(html_text.status_code))
         print("Error in establishing connection.")
         print("Check the internet connection or check the URL")
 end = time.time()
-print()
-
-
 
 # print("No.of Companies scraped : {}".format(x))
 
