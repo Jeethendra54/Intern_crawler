@@ -4,7 +4,15 @@ user_text = str(input('Enter a tech stack to extract : '))
 stored_text = user_text
 modified_user_text = user_text.replace('-' , ' ').title()
 
-user_input = ['']
+# print(stored_text)
+user_input = [
+    'information technology','Information technology','it'  'It','IT',
+    'computer vision','Computer vision','cv' , 'CV',
+    'machine learning','Machine learning','Ml','ML','ml',
+    'data science','Data science',
+    'artificial intelligence','Artificial intelligence','AI','ai',
+    'android app development','Android app development','android','Android',
+    ]
 
 # tech stack interns
 if(user_text == 'information technology' or user_text == 'Information technology' or user_text == 'it' or user_text == 'It' or user_text =='IT'):
@@ -322,7 +330,5 @@ if(user_text == 'english proficiency'):
     modified_user_text = user_text.replace('-' , ' ').title()
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
-
-
 
     
