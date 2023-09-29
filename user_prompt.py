@@ -156,7 +156,8 @@ elif(user_text == 'php' or user_text == 'php development' or user_text == 'Php d
         str_list.append(str(i))
 
 elif(user_text == 'node js' or user_text == 'Node js' or user_text == 'nodejs' or user_text == 'Nodejs'):
-    user_text = 'node.js-development'
+    # user_text = 'node.js-development'
+    user_text='node-js'
     str_list = []
     link = 'https://internshala.com/internships/' + user_text + '-internship/'
     int_total_pages = intern_page_limit(link)
@@ -346,5 +347,7 @@ elif(user_text == 'english proficiency'):
 
 
 else:
-    print("Keyword not found")
-    print("please check")
+    # print("Keyword not found")
+    # print("please check")
+    # str_list=['1']
+    str_list=[]

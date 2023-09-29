@@ -22,7 +22,8 @@ sleep(Time)
 print()
 print("Extracting {} internships".format(modified_user_text))
 
-
+# print(str_list)
+print(len(str_list))
 start = time.time()
 
 
@@ -33,10 +34,11 @@ for i in range(len(str_list)):
     # Total_intern_in_website = intern_count(url)
     html_text = requests.get(url)
 
-    if(html_text.status_code == 200):
+    if(html_text.status_code == 200 and len(str_list)):
+        print()
         print("Status code : {}".format(html_text.status_code))
-        print("Connection established....")
-        # print("Connection established for page - {}".format(str_list[i]))
+        # print("Connection established....")
+        print("Connection established for page - {}".format(str_list[i]))
 
         html_text = requests.get(url).text
         soup = BeautifulSoup(html_text, 'lxml') 
@@ -138,6 +140,9 @@ for i in range(len(str_list)):
         print("Status code : {}".format(html_text.status_code))
         print("Error in establishing connection.")
         print("Check the internet connection or check the URL")
+
+    elif(len(str_list) == 0):
+        print("Keyword not found 🖕🏻")
 end = time.time()
 print()
 
