@@ -3,7 +3,7 @@ from pagination import intern_page_limit
 user_text = str(input('Enter a tech stack to extract : '))
 stored_text = user_text
 modified_user_text = user_text.replace('-' , ' ').title()
-
+Time  = float(input("Enter time : ")) 
 # print(stored_text)
 user_input = [
     'information technology','Information technology','it','It','IT',
@@ -347,13 +347,8 @@ elif(user_text == 'english proficiency'):
 
 
 else:
-    # print("Keyword not found")
-    # print("please check")
-    # str_list=['1']
     str_list=[]
-
     print("Keyword not found")
     print("please check")
-    # user_text = -1
-    # print(user_text)
+
 

@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 # from shared_data import intern_count 
 # from user_prompt import *
-from user_prompt import user_text , modified_user_text , str_list
+from user_prompt import user_text , modified_user_text , str_list , Time
 # from skills_openings import required_skills , openings
 
 
@@ -16,14 +16,14 @@ with open('file.txt' , 'w') as file:
         file.close()
 
 
-Time  = float(input("Enter time : "))
+# Time  = float(input("Enter time : "))
 x = 0
-sleep(Time)
+# sleep(Time)
 print()
 print("Extracting {} internships".format(modified_user_text))
 
 # print(str_list)
-print(len(str_list))
+# print(len(str_list))
 start = time.time()
 for i in range(len(str_list)):
 
