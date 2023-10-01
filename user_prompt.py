@@ -3,7 +3,7 @@ from pagination import intern_page_limit
 user_text = str(input('Enter a tech stack to extract : '))
 stored_text = user_text
 modified_user_text = user_text.replace('-' , ' ').title()
-Time  = float(input("Enter time : ")) 
+# Time  = float(input("Enter time : ")) 
 # print(stored_text)
 user_input = [
     'information technology','Information technology','it','It','IT',
@@ -22,8 +22,30 @@ user_input = [
     'php','php development','Php development','PHP','Php',
     'node js' ,'Node js','nodejs','Nodejs',
     'mobile app development','Mobile app development',
-    'blockchain','Blockchain', 
+    'blockchain','Blockchain',
+    'game development','Game development',
+    'javascript','Javascript',
+    'wordpress','Wordpress',
+    'python','Python','PYTHON',
+    'django', 'Django',
+    'java','Java',
+    'software development','Software development','Software developer','software developer','SDE','Sde','sde',
+    'cybersecurity','Cybersecurity','Cyber security','cyber security','Cyber Security',
+    'ui and ux','ui/ux','UI/UX','Ui/ux',
+    'cs','CS','Computer Science','Computer science','Cs',
+    'network engineering','Network engineering','Network Engineering',
+    'graphic design','Graphic design',
+    'motion graphics','Motion graphics','Motion Graphics',
+    'Embedded systems','Embedded Systems','embedded systems',
+    'big data','Big data','Big Data',
+    'Data Analytics','data analytics','Data analytics',
     ]
+
+if user_text in user_input:
+    Time  = float(input("Enter time : "))
+
+else:
+    Time = 0 
 
 
 
@@ -266,7 +288,7 @@ elif(user_text == 'ui and ux' or user_text == 'ui/ux' or user_text == 'UI/UX' or
     for i in range(1 , int(int_total_pages)+1):
         str_list.append(str(i))
 
-elif(user_text == 'cs' or user_text == 'CS' or user_text == 'Computer Science' or user_text == 'Computer science'):
+elif(user_text == 'cs' or user_text == 'CS' or user_text == 'Computer Science' or user_text == 'Computer science' or user_input == 'Cs'):
     user_text = 'computer-science'
     str_list = []
     link = 'https://internshala.com/internships/' + user_text + '-internship/'
@@ -336,19 +358,20 @@ elif(user_text == 'Data Analytics' or user_text == 'data analytics' or user_text
         str_list.append(str(i))
 
 
-elif(user_text == 'english proficiency'):
-    user_text = 'english-proficiency-written'
-    str_list = []
-    link = 'https://internshala.com/internships/' + user_text + '-internship/'
-    int_total_pages = intern_page_limit(link)
-    modified_user_text = user_text.replace('-' , ' ').title()
-    for i in range(1 , (int_total_pages)+1):
-        str_list.append(str(i))
+# elif(user_text == 'english proficiency'):
+#     user_text = 'english-proficiency-written'
+#     str_list = []
+#     link = 'https://internshala.com/internships/' + user_text + '-internship/'
+#     int_total_pages = intern_page_limit(link)
+#     modified_user_text = user_text.replace('-' , ' ').title()
+#     for i in range(1 , (int_total_pages)+1):
+#         str_list.append(str(i))
 
 
 else:
     str_list=[]
     print("Keyword not found")
     print("please check")
+    # Time = 0
 
 

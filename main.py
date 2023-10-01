@@ -14,16 +14,11 @@ with open('file.txt' , 'w') as file:
         file.write(str(modified_user_text) + " Internships" + "\n")
         file.write("\n")
         file.close()
-
-
-# Time  = float(input("Enter time : "))
 x = 0
 # sleep(Time)
 print()
 print("Extracting {} internships".format(modified_user_text))
 
-# print(str_list)
-# print(len(str_list))
 start = time.time()
 for i in range(len(str_list)):
 
