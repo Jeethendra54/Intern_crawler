@@ -14,7 +14,7 @@ user_input = [
     'android app development','Android app development','android','Android',
     'ios app development','ios app','Ios app','ios',"Ios","IOS",
     'web development','Web development',
-    'full stack development','Full stack development','Full stack developer','full stack developer',
+    'full stack development','Full stack development','Full stack developer','full stack developer','fullstack development','Fullstack development','fullstack developer','Fullstack developer',
     'front end development','Front end development','front end developer','Front end developer','front end','Front end','frontend','Frontend',
     'backend','backend development','Backend development','Backend',
     'flutter','flutter development','Flutter development','Flutter',
@@ -24,6 +24,7 @@ user_input = [
     'mobile app development','Mobile app development',
     'blockchain','Blockchain',
     'game development','Game development',
+    'bootstrap','Bootstrap',
     'javascript','Javascript',
     'wordpress','Wordpress',
     'python','Python','PYTHON',
@@ -123,7 +124,9 @@ elif(user_text == 'web development' or user_text == 'Web development'):
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
 
-elif(user_text == 'full stack development' or user_text == 'Full stack development' or user_text == 'Full stack developer' or user_text == 'full stack developer'):
+elif(user_text == 'full stack development' or user_text == 'Full stack development' or user_text == 'Full stack developer' 
+     or user_text == 'full stack developer' or user_text == 'fullstack development' or user_text == 'Fullstack development' 
+     or user_text == 'fullstack developer' or user_text == 'Fullstack developer'):
     user_text = 'full-stack-development'
     str_list = []
     link = 'https://internshala.com/internships/' + user_text + '-internship/'
@@ -213,6 +216,16 @@ elif(user_text == 'game development' or user_text == 'Game development'):
     modified_user_text = user_text.replace('-' , ' ').title()
     for i in range(1 , (int_total_pages)+1):
         str_list.append(str(i))
+
+elif(user_text == 'bootstrap' or user_text == 'Bootstrap'):
+    user_text = 'bootstrap'
+    str_list = []
+    link = 'https://internshala.com/internships/' + user_text + '-internship/'
+    int_total_pages = intern_page_limit(link)
+    modified_user_text = user_text.replace('-' , ' ').title()
+    for i in range(1 , (int_total_pages)+1):
+        str_list.append(str(i))
+
 
 elif(user_text == 'javascript' or user_text == 'Javascript'):
     user_text = 'javascript-development'
@@ -372,6 +385,5 @@ else:
     str_list=[]
     print("Keyword not found")
     print("please check")
-    # Time = 0
 
 

@@ -4,10 +4,9 @@ from time import sleep
 import requests
 from bs4 import BeautifulSoup
 # from shared_data import intern_count 
-# from user_prompt import *
 from user_prompt import user_text , modified_user_text , str_list , Time
 # from skills_openings import required_skills , openings
-
+import csv
 
 
 with open('file.txt' , 'w') as file:
@@ -158,3 +157,65 @@ with open("file.txt" , 'a') as f:
     f.write("\n")
     # f.write(str(Interns))
     f.close()
+
+
+
+
+
+# # Define the fieldnames for the CSV file
+# fieldnames = ["Title", "Company", "Role", "Location", "Start Date", "Stipend", "Posted", "Duration", "Hiring Info", "Link"]
+
+# # Define the input and output file names
+# input_file = 'file.txt'
+# output_file = 'internships.csv'
+
+# # Create a flag to check if it's the first entry
+# first_entry = True
+
+# # Initialize the key variable
+# key = None
+
+# # Open the input file
+# with open(input_file, 'r') as txt_file:
+#     # Initialize variables to track the current title and data
+#     current_title = None
+#     current_data = {}
+    
+#     for line in txt_file:
+#         line = line.strip()
+        
+#         # Check if the line starts with "Title : "
+#         if line.startswith("Title : "):
+#             # If it's not the first entry, append a newline to separate entries
+#             if not first_entry:
+#                 with open(output_file, 'w', newline='') as csv_file:
+#                     csv_file.write("\n")
+            
+#             # Reset the current_data dictionary and update the current title
+#             current_data = {}
+#             current_title = line.split(" : ")[1].strip()
+#         else:
+#             # Split the line into key and value
+#             parts = line.split(" : ")
+#             if len(parts) == 2:
+#                 key = parts[0].strip()
+#                 value = parts[1].strip()
+#                 current_data[key] = value
+#             elif len(parts) == 1 and key == "Stipend":
+#                 # Handle the case of empty Stipend field
+#                 current_data["Stipend"] = ""  # Set it to an empty string
+            
+#             # Check if we've reached the end of an entry and write it to the CSV file
+#             if not line and current_data:
+#                 current_data["Title"] = current_title
+#                 with open(output_file, 'a', newline='') as csv_file:
+#                     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+#                     # If it's the first entry, write the header row
+#                     if first_entry:
+#                         csv_writer.writeheader()
+#                         first_entry = False
+#                     # Filter out fields not in fieldnames before writing
+#                     filtered_data = {key: current_data.get(key, '') for key in fieldnames}
+#                     csv_writer.writerow(filtered_data)
+
+# print(f"Conversion from {input_file} to {output_file} is complete.")
